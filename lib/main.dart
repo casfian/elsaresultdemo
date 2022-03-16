@@ -80,20 +80,20 @@ class ResultBreakdown extends StatelessWidget {
             //change the print to navigation
             InkWell(
               onTap: () => print('Goto BR Detail page'),
-              child: const RowBreakdownWidget(factor: 'Business Resources', priority: '', baselineprofile: 'maturity')),
+              child: const RowBreakdownWidget(factor: 'Business Resources', priority: '', baselineprofile: 'maturity', bgcolor: Colors.green,)),
             InkWell(
               onTap: () => print('Goto LCD Detail page'),
-              child: const RowBreakdownWidget(factor: 'Leadership and Capability Dev', priority: '', baselineprofile: 'takeoff')),
+              child: const RowBreakdownWidget(factor: 'Leadership and Capability Dev', priority: '', baselineprofile: 'takeoff', bgcolor: Colors.lightGreen,)),
             InkWell(
               onTap: () => print('Goto PR Detail page'),
-              child: const RowBreakdownWidget(factor: 'Personnel Resources', priority: '⭐️', baselineprofile: 'pre-takeoff')),
+              child: const RowBreakdownWidget(factor: 'Personnel Resources', priority: '⭐️', baselineprofile: 'pre-takeoff', bgcolor: Colors.lightGreenAccent,)),
             InkWell(
               onTap: () => print('Goto SR Detail page'),
-              child: const RowBreakdownWidget(factor: 'System Resources', priority: '⭐️', baselineprofile: 'pre-takeoff')),
+              child: const RowBreakdownWidget(factor: 'System Resources', priority: '⭐️', baselineprofile: 'pre-takeoff', bgcolor: Colors.lightGreenAccent,)),
             InkWell(
               onTap: () => print('Goto FR Detail page'),
-              child: const RowBreakdownWidget(factor: 'Financial Resources', priority: '⭐️', baselineprofile: 'pre-takeoff')),
-            const RowBreakdownWidget(factor: 'OVERALL SCORE', priority: '', baselineprofile: 'takeoff'),  
+              child: const RowBreakdownWidget(factor: 'Financial Resources', priority: '⭐️', baselineprofile: 'pre-takeoff', bgcolor: Colors.lightGreenAccent,)),
+            const RowBreakdownWidget(factor: 'OVERALL SCORE', priority: '', baselineprofile: 'takeoff', bgcolor: Colors.lightGreen,),  
           ],
         ),
       ),

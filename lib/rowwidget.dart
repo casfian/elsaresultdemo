@@ -5,17 +5,21 @@ class RowBreakdownWidget extends StatefulWidget {
       {Key? key,
       required this.factor,
       this.priority,
-      required this.baselineprofile})
+      required this.baselineprofile,
+      required this.bgcolor})
       : super(key: key);
 
   final String factor, baselineprofile;
   final String? priority;
+  final Color bgcolor;
+
 
   @override
   State<RowBreakdownWidget> createState() => _RowBreakdownWidgetState();
 }
 
 class _RowBreakdownWidgetState extends State<RowBreakdownWidget> {
+
   @override
   Widget build(BuildContext context) {
     var _screenwidth = MediaQuery.of(context).size.width / 3;
@@ -24,7 +28,7 @@ class _RowBreakdownWidgetState extends State<RowBreakdownWidget> {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
-          padding: const EdgeInsets.fromLTRB(10,2,2,2),
+          padding: const EdgeInsets.fromLTRB(10, 2, 2, 2),
           width: _screenwidth,
           height: 50,
           child: Column(
@@ -59,7 +63,7 @@ class _RowBreakdownWidgetState extends State<RowBreakdownWidget> {
               Container(
                 width: _screenwidth,
                 height: 40,
-                color: Colors.greenAccent,
+                color: widget.bgcolor,
                 child: Center(
                   child: Text(
                     widget.baselineprofile.toUpperCase(),
